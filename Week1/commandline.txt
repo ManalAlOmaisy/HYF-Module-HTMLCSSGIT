@@ -1,0 +1,14 @@
+Ans 1. 
+to create a hidden file 
+mkdir .Manal
+to display the file
+ls -A
+
+Ans2. mkdir -p these/folders/are/just/for/fun
+
+/Users/manalmalik/these/folders/are/just/for/fun
+
+Ans3. echo -e ‘first message \nsecond message’ >> commandline.txt 
+
+first message 
+second message
