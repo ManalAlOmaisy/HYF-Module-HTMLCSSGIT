@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    max-width: 80%;
+    margin: auto;
+}
+span,small{
+    color: rgb(204, 105, 13);
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color:blue;
+}
+a:hover{
+    font-size: 16px;
+}
+
+body{
+font-family: 'Montserrat', sans-serif;
+line-height: 25px;
+color: rgb(88, 88, 88);
+}
+ul{
+    padding-left: 20px;
+}
+
+/* header */
+#nav{
+    background:url('background1.jpg') no-repeat center/cover;
+}
+
+.nav-bar{
+   
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    height: 350px;
+    
+
+}
+#img{
+  padding: 40px 10px; 
+  margin-left: 30px;
+     
+}
+img{
+    border:1px solid;
+    border-radius: 50%;
+}
+#address{
+    font-weight: bold;
+}
+#address ul{
+    list-style: none;
+}
+
+i{
+    padding:10px;
+}
+
+/* main */
+main{
+    display:flex;
+    flex-direction: row;
+   
+
+}
+
+/* section left */
+#section-left{
+    background-color: rgb(240, 209, 181);
+    padding:30px 30px;
+    width:70%;
+}
+h2,h4{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-style: italic;
+}
+
+/* section right */
+#section-right{
+    background-color: rgb(167, 210, 236);
+    padding:30px 20px;
+    width:30%; 
+}
+#section-right p,ul{
+    padding-bottom: 30px;
+}
+#section-right i{
+    padding-right: 20px;
+    font-size:20px ;
+   
+}
+#section-right i:hover{
+    font-size: 40px;
+
+}
+
+
+/* footer */
+footer{
+  
+    color:white;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(145, 141, 135);
+}
+
+footer a{
+    color:white;
+    
+}
+
+footer a:hover{
+    color:blue;
+}
+
+
+/* responsive for media devices */
+
+@media(max-width:768px){
+    
+    .nav-bar{
+       flex-direction: column;
+       height: 100%;  
+
+    }
+    main{
+        flex-direction: column;
+        height: 100%;  
+    }
+    #section-right{
+        width:100%;
+    }
+    #section-left{
+        width:100%;
+    }
+
+}
