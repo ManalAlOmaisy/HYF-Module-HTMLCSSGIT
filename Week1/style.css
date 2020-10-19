@@ -32,7 +32,7 @@ ul{
 
 /* header */
 #nav{
-    background:url('background1.jpg') no-repeat center/cover;
+    background:url('root/background1.jpg') no-repeat center/cover;
 }
 
 .nav-bar{
