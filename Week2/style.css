@@ -1,0 +1,266 @@
+
+/* import google font */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+
+/* reset the values */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family:'Merriweather', serif;
+    background:rgb(5, 51, 88);
+    font-size: 16px;
+    line-height: 1.6rem;
+    font-weight: bold;   
+  
+}
+
+section{
+    max-width:90%;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    font-size:3rem;
+    color:rgb(216, 195, 2);
+    padding:6rem 0;
+    background:url("images/drone.jp2") no-repeat center/cover;
+    width: 90%;
+    margin:auto;
+
+  
+}
+
+h2,h3 { 
+    text-align: center;
+    padding:1.8rem 0rem;
+    
+    
+}
+
+h2 { 
+    clear: both;
+    background-color:rgb(216, 195, 2);
+    font-size: 2rem; 
+    
+   
+}
+
+ul{
+    list-style: none; 
+    position: relative;
+}
+
+li{
+    background-color: white;
+    border:0.4rem solid rgb(197, 194, 194);
+   
+    /* transition: background 1s ease-in; */
+}
+
+
+/* grid with floats */
+
+#grid-floats {
+    max-width:100%;
+
+} 
+
+#grid-floats .grid-item{
+display: inline;
+float:left;
+max-width:25%;
+height:23rem;
+text-align: center;
+
+
+}
+
+
+#grid-floats .grid-item:first-child,#grid-floats .grid-item:nth-child(14){
+   max-width:50%;
+}
+
+#grid-floats .grid-item:first-child img{
+    animation: flying-drone 6s ease-in-out;
+    position: relative;
+}
+
+
+#grid-floats .grid-item img{
+   
+    max-width:40%;
+    height: auto;
+ 
+  
+}
+
+#grid-floats .grid-item p{
+   
+margin:0.2rem;
+text-align: justify;
+padding:0 1rem;
+}
+
+/* grid with flex */
+
+#grid-flex{
+    clear:both;
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    height: auto;
+
+}
+
+
+#grid-flex .grid-item{
+
+   flex:25%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  
+
+}
+#grid-flex .grid-item:first-child{
+    flex: 50%;
+}
+
+#grid-flex .grid-item img{
+    width: 40%;
+    height: auto;
+}
+
+#grid-flex .grid-item p{
+    
+    padding:0 1.4rem;
+}
+
+
+/*  hover status */
+
+li:hover{
+ transform: scale(1.1);
+ border:5px solid rgb(216, 195, 2);
+}
+
+
+/* media query for smaller devices less than 600px*/
+
+@media screen and (max-width: 600px){
+   
+    /* float */  
+
+section #grid-floats .grid-item {
+    display: block;
+    max-width:100%;
+    height:auto;
+}
+
+#grid-floats .grid-item:first-child,#grid-floats .grid-item:nth-child(2),
+#grid-floats .grid-item:nth-child(14) {
+    display: block;
+    max-width:100%;
+    height: auto;
+}
+
+header{
+    font-size: 2rem;
+    background:url("images/drone.jp2") no-repeat right;
+    height:1.4rem;
+}
+
+    /* flex */
+
+   #grid-flex {
+
+    flex-direction: column;
+    width:100%;
+    height: auto; 
+}
+ 
+
+    
+} 
+
+/* media queries between 600 and 1024*/
+
+@media screen and (min-width: 600px) and (max-width: 1024px){
+   
+    /* float */  
+section #grid-floats .grid-item {
+    display: inline;
+    max-width:33.3%;
+    height:23rem;
+}
+#grid-floats .grid-item:first-child,#grid-floats .grid-item:nth-child(2){
+    max-width: 50%;
+}
+#grid-floats .grid-item:nth-child(14){
+    max-width:33.3%;
+
+}
+
+
+#grid-floats .grid-item img{
+
+    max-width:30%;
+    height: auto;
+   
+}
+
+#grid-floats .grid-item p{
+    max-width:100%;
+    
+   
+   
+}
+#grid-floats .grid-item h3{
+    font-size: 1.3rem;
+  
+}
+
+
+ /* flex */
+
+#grid-flex {
+
+    display: flex;
+    width:100%;
+    height: auto;
+ 
+   
+}
+#grid-flex .grid-item{
+    flex:33.3%;
+    
+ }
+ #grid-flex .grid-item:nth-child(2){
+     flex:50%;
+ }
+    
+} 
+
+/* I had to switch places(names) between img drone1 and drone2
+in the img folder in order to get flying drone looks good :) (drone1 has a white backgroung)*/
+@keyframes flying-drone{
+
+     25%{top:0;
+     left:-250px;}
+
+     50%{top:-250px;
+        left:-350px}
+
+     75%{top:-350px;
+         left:0px;}
+
+     100%{top:0;
+         left:0;}
+  }
