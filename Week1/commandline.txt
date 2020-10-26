@@ -1,7 +1,7 @@
 Ans 1. 
-to create a hidden file 
+to create a hidden folder 
 mkdir .Manal
-to display the file
+to display the folder
 ls -A
 
 Ans2. mkdir -p these/folders/are/just/for/fun
